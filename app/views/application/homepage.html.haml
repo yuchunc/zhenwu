@@ -1,1 +1,14 @@
-%h1 Hello~
+%h1 This is the homepage
+
+.row
+  #homepage-carousel.carousel.slide
+    %ol.carousel-indicators
+      - 3.times do |i|
+        %li{"data-target" => "#homepage-carousel", "data-slide-to" => i.to_s}
+
+    .carousel-inner
+      - 3.times do |i|
+        .item
+          = image_tag "#{i}.jpg"
+          .carousel-caption= "item #{i}"
+

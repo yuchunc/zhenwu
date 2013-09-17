@@ -1,14 +1,12 @@
-%h1 This is the homepage
-
 .row
-  #homepage-carousel.carousel.slide
-    %ol.carousel-indicators
-      - 3.times do |i|
-        %li{"data-target" => "#homepage-carousel", "data-slide-to" => i.to_s}
+  .col-lg-7
+    #homepage-carousel.carousel.slide
+      %ol.carousel-indicators
+        - 3.times do |i|
+          %li{"data-target" => "#homepage-carousel", "data-slide-to" => i.to_s, class: ("active" if i == 0)}
 
-    .carousel-inner
-      - 3.times do |i|
-        .item
-          = image_tag "#{i}.jpg"
-          .carousel-caption= "item #{i}"
-
+      .carousel-inner
+        - 3.times do |i|
+          .item{class: ("active" if i == 0)}
+            = image_tag "#{i}.jpg", class: "img-responsive"
+            .carousel-caption= "item #{i}"

@@ -1,24 +1,32 @@
 .header
   .row
-    .container
-      .col-lg-12
-        #homepage-carousel.carousel.slide
-          %ol.carousel-indicators
-            - 3.times do |i|
-              %li{"data-target" => "#homepage-carousel", "data-slide-to" => i.to_s, class: ("active" if i == 0)}
+    .col-lg-9
+      #homepage-carousel.carousel.slide
+        %ol.carousel-indicators
+          - 3.times do |i|
+            %li{"data-target" => "#homepage-carousel", "data-slide-to" => i.to_s, class: ("active" if i == 0)}
 
-          .carousel-inner
-            - 3.times do |i|
-              .item{class: ("active" if i == 0)}
-                = image_tag "#{i}.jpg", class: "img-responsive"
-                .carousel-caption= "item #{i}"
+        .carousel-inner
+          - 3.times do |i|
+            .item{class: ("active" if i == 0)}
+              = image_tag "#{i}.jpg", class: "img-responsive"
+              .carousel-caption= "item #{i}"
 
-          .left.carousel-control= link_to icon("chevron-left"), "#homepage-carousel", "data-slide" => "prev"
-          .right.carousel-control= link_to icon("chevron-right"), "#homepage-carousel", "data-slide" => "next"
+        .left.carousel-control= link_to icon("chevron-left"), "#homepage-carousel", "data-slide" => "prev"
+        .right.carousel-control= link_to icon("chevron-right"), "#homepage-carousel", "data-slide" => "next"
 
-#recent_articles.row
-  .col-lg-8
-    %h3 Recent Articles Goes Here
+      #recent-post
+        %h3 Recent Articles Goes Here
+
+    .col-lg-3
+      #contact-info.well
+        Contact Informations
+      #social-buttons.well
+        Social Buttons
+      #recent-comments.well
+        Recent Comments
+
+
 
 :javascript
   $('.carousel').carousel({

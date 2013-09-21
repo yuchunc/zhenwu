@@ -31,7 +31,11 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'has_scope'
 
-#assets
+group :test, :development do
+  gem 'minitest-rails'
+  gem 'guard'
+  gem 'guard-minitest'
+end
 
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails'
 

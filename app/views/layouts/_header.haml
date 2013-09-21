@@ -1,8 +1,16 @@
 .navbar.navbar-default{role: "navigation"}
-  .navbar-header.navbar-brand= link_to t("nav.title"), root_path
-  %ul.nav.navbar-nav
-    %li= link_to t("nav.about"), "#"
-    %li= link_to t("nav.class"), "#"
-    %li= link_to t("nav.blog"), "#"
-    %li= link_to t("nav.valut"), "#"
+  .navbar-header
+    %button.navbar-toggle{"data-toggle" => "collapse", "data-target" => ".navbar-collapse"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+
+    .navbar-brand= link_to t("nav.title"), root_path
+
+  .collapse.navbar-collapse
+    %ul.nav.navbar-nav
+      %li= link_to t("nav.about"), "#"
+      %li= link_to t("nav.class"), "#"
+      %li= link_to t("nav.blog"), "#"
+      %li= link_to t("nav.valut"), "#"
 

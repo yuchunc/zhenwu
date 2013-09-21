@@ -1,4 +1,8 @@
 en:
-  hello: "Hello world"
   nav:
-    title: "ZhenWu"
+    title: Zhen-Wu
+    about: About
+    course: Courses
+    blog: Blog
+    valut: Valut
+    home: Home

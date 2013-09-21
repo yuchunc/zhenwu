@@ -9,8 +9,9 @@
 
   .collapse.navbar-collapse
     %ul.nav.navbar-nav
-      %li= link_to t("nav.about"), "#"
-      %li= link_to t("nav.class"), "#"
-      %li= link_to t("nav.blog"), "#"
-      %li= link_to t("nav.valut"), "#"
+      %li= link_to t("nav.home"), root_path
+      %li= link_to t("nav.about"), about_path
+      %li= link_to t("nav.course"), courses_path
+      %li= link_to t("nav.blog"), blog_path
+      %li= link_to t("nav.valut"), valut_path
 

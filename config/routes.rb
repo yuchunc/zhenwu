@@ -2,6 +2,11 @@ Zhenwu::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  get "about", to: "application#about"
+  get "courses", to: "application#courses"
+  get "blog", to: "application#blog"
+  get "valut", to: "application#valut"
+
   # You can have the root of your site routed with "root"
   root 'application#homepage'
 

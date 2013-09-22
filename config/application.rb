@@ -21,5 +21,11 @@ module Zhenwu
     config.i18n.default_locale = "zh-TW"
 
     config.autoload_paths += Dir["#{config.root}/lib"]
+
+    config.generators do |g|
+      g.template_engine :haml
+      g.stylesheets     false
+      g.javascripts     false
+    end
   end
 end

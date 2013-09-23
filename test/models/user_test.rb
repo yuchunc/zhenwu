@@ -1,18 +1,23 @@
 require "test_helper"
 
-class UserTest < ActiveSupport::TestCase
-  test "the truth" do
-    assert true
-  end
+describe User do
 
-  test "should not save user without email" do
-    user = User.new
-    refute user.save
-  end
+  #Unit test practice
 
-  # test "should report some errors" do
-  #   some_undefined_variable
-  #   assert true
-  # end
+  #describe "Validation" do
+  #  let(:user) { User.new }
+
+  #  it "should not save user without email" do
+  #    user.password = "shhdonttell"
+  #    user.save.wont_equal true
+  #  end
+
+  #  it "should not save user without password" do
+  #    user.email = "hello@sample.com"
+  #    user.save.wont_equal true
+  #  end
+  #end
+
+
 
 end

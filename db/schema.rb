@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922012127) do
+ActiveRecord::Schema.define(version: 20130923092336) do
+
+  create_table "pages", force: true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "description"
+    t.text     "body"
+    t.boolean  "locked",      default: false
+    t.boolean  "immortal"
+    t.string   "language"
+    t.integer  "pagetype",    default: 0
+    t.integer  "page_ida"
+    t.boolean  "published",   default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

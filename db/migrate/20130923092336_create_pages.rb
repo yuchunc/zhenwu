@@ -4,11 +4,13 @@ class CreatePages < ActiveRecord::Migration
       t.string  :name
       t.string  :title
       t.string  :description
-      t.text    :content
+      t.text    :body
+      t.boolean :locked, default: false
       t.boolean :immortal
       t.string  :language
       t.integer :pagetype, default: 0
-      t.integer :page_id
+      t.integer :page_ida
+      t.boolean :published, default: false
 
       t.timestamps
     end

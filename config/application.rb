@@ -25,7 +25,7 @@ module Zhenwu
     config.generators do |g|
       g.template_engine :haml
       g.stylesheets     false
-      g.test_framework  :mini_test, fixture: false
+      g.test_framework  :mini_test, fixture: false, spec: true
       g.javascripts     false
     end
   end

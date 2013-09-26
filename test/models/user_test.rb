@@ -4,7 +4,7 @@ describe User do
 
   #Unit test practice
 
-  #describe "Validation" do
+  #describe "validation" do
   #  let(:user) { User.new }
 
   #  it "should not save user without email" do

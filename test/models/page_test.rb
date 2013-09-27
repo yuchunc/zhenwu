@@ -13,7 +13,6 @@ describe Page do
       page.save.wont_equal true
     end
 
-
   end
 
 end

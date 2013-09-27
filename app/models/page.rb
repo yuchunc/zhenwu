@@ -1,4 +1,4 @@
 class Page < ActiveRecord::Base
 
-    validate
+    validates_presence_of :title
 end

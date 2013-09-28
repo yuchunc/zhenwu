@@ -3,8 +3,9 @@ require "test_helper"
 describe "page translations" do
 
   it "should be in English" do
-    skip
-    get "/about?locales=en"
+    #get "/about?locales=en"
+    #visit about_path(locale: "en")
+    visit("/about?locales=en")
   end
 
   it "should be in Traditional Chinese" do

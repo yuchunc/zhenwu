@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130923092336) do
+ActiveRecord::Schema.define(version: 20130928144605) do
 
   create_table "pages", force: true do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20130923092336) do
     t.boolean  "immortal"
     t.string   "language"
     t.integer  "pagetype",    default: 0
-    t.integer  "page_ida"
+    t.integer  "page_id"
     t.boolean  "published",   default: false
     t.datetime "created_at"
     t.datetime "updated_at"

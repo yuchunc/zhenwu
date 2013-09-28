@@ -1,16 +1,25 @@
 require "test_helper"
 
-describe "page translations" do
+describe "PageTranslations Integration Test" do
+  describe "when locale is set to en" do
+    before do
+      skip
+      get "/?locale=en"
+    end
 
-  it "should be in English" do
-    #get "/about?locales=en"
-    #visit about_path(locale: "en")
-    visit("/about?locales=en")
+    it "about should be in English" do
+      get "/about"
+
+    end
+
   end
 
-  it "should be in Traditional Chinese" do
-  end
+  describe "when locale is set to zh-TW" do
 
+    it "should be in Traditional Chinese" do
+    end
+
+  end
 
 end
 

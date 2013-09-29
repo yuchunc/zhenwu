@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   include SetLocale
 
   before_action :settings
+  before_action :set_locale
 
   def homepage
   end
@@ -22,6 +23,10 @@ class ApplicationController < ActionController::Base
 
     def settings
       setuserlocale
+    end
+
+    def set_locale
+      I18n.locale = params[:locale] || I18n.default_locale
     end
 
 end

@@ -9,9 +9,6 @@ require "factory_girl"
 # to the test group in the Gemfile and uncomment the following:
 # require "minitest/rails/capybara"
 
-# Uncomment for awesome colorful output
-# require "minitest/pride"
-
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.

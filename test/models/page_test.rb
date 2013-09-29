@@ -14,8 +14,8 @@ describe Page do
 
   describe "find page by language" do
     before do
-      @page_en = FactoryGirl.build(:page_en)
-      @page_tw = FactoryGirl.build(:page_tw)
+      @page_en = FactoryGirl.create(:page_en)
+      @page_tw = FactoryGirl.create(:page_zh_tw)
     end
 
     it "should find the page according to page name and title" do

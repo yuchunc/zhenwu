@@ -8,18 +8,29 @@
 #
 
 ###Imortal Pages
+Page.delete_all
 ##About Page
-#@about_en = Page.create( title: "About Zhen Wu",
-#                         immortal: true,
-#                         language: "en",
-#                         pagetype: 0,
-#                         published: true
-#                       )
-@about_tw = Page.create( title: "關於真武",
-                         immortal: true,
-                         language: "zh-TW",
-                         pagetype: 0,
-                         #page_id: @about_en.id
-                         published: true
-                       )
-
+@about = Page.create( title: "關於真武",
+                      immortal: true,
+                      language: "zh-TW",
+                      pagetype: 0,
+                      published: true
+                    )
+@course = Page.create(  title: "真武課程",
+                        immortal: true,
+                        language: "zh-TW",
+                        pagetype: 0,
+                        published: true
+                      )
+@blog = Page.create(  title: "部落格",
+                      immortal: true,
+                      language: "zh-TW",
+                      pagetype: 0,
+                      published: true
+                    )
+#@valut = Page.create( title: "武聲繪影",
+#                       immortal: true,
+#                       language: "zh-TW",
+#                       pagetype: 0,
+#                       published: true
+#                     )

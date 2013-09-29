@@ -18,9 +18,6 @@ class ApplicationController < ActionController::Base
   def blog
   end
 
-  def valut
-  end
-
   private
 
     def settings

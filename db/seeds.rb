@@ -10,24 +10,27 @@
 ###Imortal Pages
 Page.delete_all
 ##About Page
-@about = Page.create( title: "關於真武",
+@about = Page.create( name: "about",
+                      title: "關於真武",
                       immortal: true,
                       language: "zh-TW",
                       pagetype: 0,
                       published: true
                     )
-@course = Page.create(  title: "真武課程",
-                        immortal: true,
-                        language: "zh-TW",
-                        pagetype: 0,
-                        published: true
-                      )
-@blog = Page.create(  title: "部落格",
-                      immortal: true,
-                      language: "zh-TW",
-                      pagetype: 0,
-                      published: true
-                    )
+@course = Page.create( name: "course",
+                       title: "真武課程",
+                       immortal: true,
+                       language: "zh-TW",
+                       pagetype: 0,
+                       published: true
+                     )
+@blog = Page.create( name: "blog",
+                     title: "部落格",
+                     immortal: true,
+                     language: "zh-TW",
+                     pagetype: 0,
+                     published: true
+                   )
 #@valut = Page.create( title: "武聲繪影",
 #                       immortal: true,
 #                       language: "zh-TW",

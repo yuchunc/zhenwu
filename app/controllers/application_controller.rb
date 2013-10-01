@@ -11,12 +11,15 @@ class ApplicationController < ActionController::Base
   end
 
   def about
+    @page = Page.find_translated("about", I18n.locale)
   end
 
   def courses
+    @page = Page.find_translated("course", I18n.locale)
   end
 
   def blog
+    @page = Page.find_translated("blog", I18n.locale)
   end
 
   private

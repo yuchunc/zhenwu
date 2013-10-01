@@ -5,13 +5,28 @@ describe "UserLogin Integration Test" do
   # it "must be a real test" do
   #   flunk "Need real tests"
   # end
+  describe "when admin login" do
 
-  before do
-    @admin = FactoryGirl.create(:admin)
-  end
+    before do
+      @admin = FactoryGirl.create(:admin)
+    end
 
-  it "should be able to login" do
-    visit "/users/sign_in"
+    describe "successfull login" do
+      it "should redirect to admin dashboard" do
+        visit "/users/sign_in"
+        assert page.find("h2").has_content? "登入"
+
+        fill_in "user_email", with: "admin@zhenwu.com"
+        fill_in "user_password", with: "qwer1234"
+
+        click_link "登入"
+
+        assert_response :success
+
+        page.has_content? "管理者平台"
+
+      end
+    end
   end
 
 end

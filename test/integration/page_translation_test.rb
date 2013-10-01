@@ -1,22 +1,25 @@
 require "test_helper"
 
 describe "PageTranslations Integration Test" do
-  describe "when locale is set to en" do
-    before do
-      skip
-      get "/?locale=en"
-    end
-
-    it "about should be in English" do
-      get "/about"
-
-    end
-
+  before do
+    loadseeds
   end
 
-  describe "when locale is set to zh-TW" do
+  describe "when locale is default to zh-TW" do
 
-    it "should be in Traditional Chinese" do
+    it "About Page" do
+      visit "/about"
+      assert page.find("h1").has_content?("關於真武")
+    end
+
+    it "Course Page" do
+      visit "/courses"
+      assert page.find("h1").has_content?("真武課程")
+    end
+
+    it "Blog Page" do
+      visit "/blog"
+      assert page.find("h1").has_content?("部落格")
     end
 
   end

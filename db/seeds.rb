@@ -17,7 +17,7 @@ Page.delete_all
                       pagetype: 0,
                       published: true
                     )
-@course = Page.create( name: "course",
+@courses = Page.create( name: "course",
                        title: "真武課程",
                        immortal: true,
                        language: "zh-TW",

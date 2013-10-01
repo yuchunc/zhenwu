@@ -5,9 +5,9 @@ body{
 }
 
 .container{
-  width: 900px;
+  width: 950px;
   max-width: 90%;
-  margin-left: 17%;
+  margin-left: 25%;
   margin-top: 40px;
   background: white;
   border-radius: 5px;
@@ -36,5 +36,12 @@ body{
 @media (max-width: 1090px){
   .container{
     margin-left: auto;
+  }
+}
+
+@media (min-width: 1700px){
+  .container{
+    margin-left: auto;
+    width: 1170px;
   }
 }

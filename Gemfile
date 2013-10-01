@@ -23,7 +23,7 @@ group :test, :development do
   gem 'guard'
   gem 'guard-minitest'
   gem 'factory_girl_rails'
-#  gem 'capybara'
+  gem 'minitest-rails-capybara'
 #  gem 'debugger', group: [:development, :test]
 end
 

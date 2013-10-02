@@ -1,11 +1,4 @@
 zh-TW:
-  nav:
-    title: 真武會館
-    about: 關於真武
-    course: 真武課程
-    blog: 部落格
-    valut: 武聲繪影
-    home: 首頁
   date:
     abbr_day_names:
     - 日
@@ -257,3 +250,12 @@ zh-TW:
         subject: '重設密碼步驟'
       unlock_instructions:
         subject: '解鎖步驟'
+  nav:
+    title: 真武會館
+    about: 關於真武
+    course: 真武課程
+    blog: 部落格
+    valut: 武聲繪影
+    home: 首頁
+  session:
+    sign_in: 登入

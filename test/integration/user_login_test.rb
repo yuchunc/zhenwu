@@ -19,11 +19,11 @@ describe "UserLogin Integration Test" do
         fill_in "user_email", with: "admin@zhenwu.com"
         fill_in "user_password", with: "qwer1234"
 
-        click_link "登入"
+        click_button "登入"
 
-        assert_response :success
+        #assert_response :success
 
-        page.has_content? "管理者平台"
+        assert page.has_content? "管理者平台"
 
       end
     end

@@ -7,7 +7,7 @@ body{
 .container{
   width: 950px;
   max-width: 90%;
-  margin-left: 25%;
+  margin-left: 20%;
   margin-top: 40px;
   background: white;
   border-radius: 5px;
@@ -33,7 +33,7 @@ body{
   margin-right: -15px;
 }
 
-@media (max-width: 1090px){
+@media (max-width: 1150px){
   .container{
     margin-left: auto;
   }

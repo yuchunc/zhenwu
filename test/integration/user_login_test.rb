@@ -21,7 +21,7 @@ describe "UserLogin Integration Test" do
 
         click_button "登入"
 
-        #assert_response :success
+        assert_response :success
 
         assert page.has_content? "管理者平台"
 

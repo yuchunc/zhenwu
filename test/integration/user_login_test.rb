@@ -14,7 +14,7 @@ describe "UserLogin Integration Test" do
       describe "successfull login" do
       it "should redirect to root_path" do
         visit "/users/sign_in"
-        assert page.find("h2").has_content? "登入"
+        assert page.find("h3").has_content? "登入"
 
         fill_in "user_email", with: "admin@zhenwu.com"
         fill_in "user_password", with: "qwer1234"

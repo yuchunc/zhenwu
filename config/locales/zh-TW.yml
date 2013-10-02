@@ -212,10 +212,11 @@ zh-TW:
       unauthenticated: '您需要先註冊，登入後才能繼續。'
       unconfirmed: '您的帳號需需要經過確認後，才能繼續。'
       locked: '您的帳號已被鎖定。'
-      invalid: 'Email 或密碼是無效的。'
+      invalid: 'Email 或密碼無效。'
       invalid_token: '無效的認證代碼。'
       timeout: '您的登入時效過期，請重新登入，才能繼續。'
       inactive: '您的帳號尚未被啟用。'
+      not_found_in_database: "Email與密碼無效。"
     sessions:
       signed_in: '成功登入了。'
       signed_out: '成功登出了。'
@@ -258,10 +259,11 @@ zh-TW:
     valut: 武聲繪影
     home: 首頁
     admin:
+      entrance: 後台功能
       dashboard: 控制板
   session:
     email: E-mail
     password: 密碼
     sign_in: 登入
+    sign_out: 登出
     remember_me: 保持登入
-

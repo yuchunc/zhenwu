@@ -23,7 +23,8 @@ describe "UserLogin Integration Test" do
 
         #assert_response :success
 
-        assert page.has_css?("homepage-carousel")
+        assert page.has_css?("#homepage-carousel")
+        assert page.has_css?("#admin-nav")
 
       end
     end

@@ -257,5 +257,11 @@ zh-TW:
     blog: 部落格
     valut: 武聲繪影
     home: 首頁
+    admin:
+      dashboard: 控制板
   session:
+    email: E-mail
+    password: 密碼
     sign_in: 登入
+    remember_me: 保持登入
+

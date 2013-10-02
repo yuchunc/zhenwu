@@ -14,4 +14,7 @@
       %li= link_to t("nav.course"), courses_path
       %li= link_to t("nav.blog"), blog_path
       -#%li= link_to t("nav.valut"), valut_path
+      -if current_user.present? and current_user.is_admin?
+        %li#admin_dashboard= link_to t("nav.admin.dashboard"), admin_path
+
 

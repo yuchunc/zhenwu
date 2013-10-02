@@ -4,8 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   #include SetLocale
 
-  before_action :settings
-  before_action :set_locale
+  #before_action :settings
+  #before_action :set_locale
 
   def homepage
   end
@@ -24,12 +24,12 @@ class ApplicationController < ActionController::Base
 
   private
 
-    def settings
-      setuserlocale
-    end
+    #def settings
+    #  setuserlocale
+    #end
 
-    def set_locale
-      I18n.locale = params[:locale] || I18n.default_locale
-    end
+    #def set_locale
+    #  I18n.locale = params[:locale] || I18n.default_locale
+    #end
 
 end

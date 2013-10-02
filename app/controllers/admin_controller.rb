@@ -5,6 +5,8 @@ class AdminController < ActionController::Base
   before_action :authenticate_user! rescue redirect_to new_user_session_path
   before_action :is_admin
 
+  layout "application"
+
   protected
 
    def is_admin

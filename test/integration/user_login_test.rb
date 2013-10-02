@@ -11,8 +11,8 @@ describe "UserLogin Integration Test" do
       @admin = FactoryGirl.create(:admin)
     end
 
-    describe "successfull login" do
-      it "should redirect to admin dashboard" do
+      describe "successfull login" do
+      it "should redirect to root_path" do
         visit "/users/sign_in"
         assert page.find("h2").has_content? "登入"
 
@@ -21,9 +21,9 @@ describe "UserLogin Integration Test" do
 
         click_button "登入"
 
-        assert_response :success
+        #assert_response :success
 
-        assert page.has_content? "管理者平台"
+        assert page.has_css?("homepage-carousel")
 
       end
     end

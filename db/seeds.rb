@@ -9,7 +9,6 @@
 
 ###Imortal Pages
 Page.delete_all
-##About Page
 @about = Page.create( name: "about",
                       title: "關於真武",
                       immortal: true,
@@ -37,3 +36,10 @@ Page.delete_all
 #                       pagetype: 0,
 #                       published: true
 #                     )
+
+###Admin User
+User.delete_all
+@admin = User.create( email: "admin@zhenwu.com",
+                      password: "qwer1234",
+                      admin: true
+                    )

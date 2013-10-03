@@ -13,21 +13,18 @@ Page.delete_all
                       title: "關於真武",
                       immortal: true,
                       language: "zh-TW",
-                      pagetype: 0,
                       published: true
                     )
 @courses = Page.create( name: "course",
                        title: "真武課程",
                        immortal: true,
                        language: "zh-TW",
-                       pagetype: 0,
                        published: true
                      )
 @blog = Page.create( name: "blog",
                      title: "部落格",
                      immortal: true,
                      language: "zh-TW",
-                     pagetype: 0,
                      published: true
                    )
 #@valut = Page.create( title: "武聲繪影",

@@ -13,6 +13,8 @@ Zhenwu::Application.routes.draw do
 
   namespace :admin do
     get '/', to: "dashboard#index"
+
+    resources :pages
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

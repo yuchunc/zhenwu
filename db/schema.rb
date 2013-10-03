@@ -11,14 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130928144605) do
+ActiveRecord::Schema.define(version: 20131003071336) do
 
   create_table "pages", force: true do |t|
     t.string   "name"
     t.string   "title"
     t.string   "description"
     t.text     "body"
-    t.boolean  "locked",      default: false
     t.boolean  "immortal"
     t.string   "language"
     t.integer  "pagetype",    default: 0

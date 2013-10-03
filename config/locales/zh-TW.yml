@@ -261,9 +261,21 @@ zh-TW:
     admin:
       entrance: 後台功能
       dashboard: 控制板
+      page_control: 頁面管理
+      post_control: 文章管理
   session:
     email: E-mail
     password: 密碼
     sign_in: 登入
     sign_out: 登出
     remember_me: 保持登入
+  page:
+    name: 名稱
+    title: 標題
+    description: 描述
+    content: 內文
+    page_type: 種類
+  button:
+    new: 新增
+    edit: 修改
+    delete: 刪除

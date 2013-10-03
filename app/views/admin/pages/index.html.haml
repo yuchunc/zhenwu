@@ -1,0 +1,19 @@
+%h3= t('nav.admin.page_control')
+
+%table.table.table-condensed.table-hover
+  %thead
+    %tr
+      %th= t "page.name"
+      %th= t "page.title"
+      %th= t "page.description"
+      %th
+  %tbody
+    - @pages.each do |page|
+      %tr
+        %td= page.name
+        %td= page.title
+        %td= page.description
+        %td
+          = link_to t("button.edit"), edit_admin_page_path(page), class: "btn btn-warning btn-xs"
+
+

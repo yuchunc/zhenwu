@@ -1,17 +1,18 @@
-%h3= t "page.edit"
+#page_edit
+  %h3= t "page.edit"
 
-.row
+  .row
 
-  = form_for [:admin, @page], role: "form", class: "form-horizontal" do |f|
+    = form_for [:admin, @page], role: "form", class: "form-horizontal" do |f|
 
-    .form-group
-      = f.label :name, t('page.name'), class: "col-md-1 control-label"
-      .col-md-5
-        = f.text_field :name, class: "form-control", disabled: @page.immortal ? true : false
+      .form-group
+        = f.label :name, t('page.name'), class: "col-md-1 control-label"
+        .col-md-5
+          = f.text_field :name, class: "form-control", disabled: @page.immortal ? true : false
 
-    .clearfix
+      .clearfix
 
-    .form-group
-      = f.label :title, t('page.title'), class: "col-md-1 control-label"
-      .col-md-5
-        =f.text_field :title, class: "form-control"
+      .form-group
+        = f.label :title, t('page.title'), class: "col-md-1 control-label"
+        .col-md-5
+          =f.text_field :title, class: "form-control"

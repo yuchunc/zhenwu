@@ -16,6 +16,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'ckeditor'
+
 gem 'has_scope'
 
 group :test, :development do

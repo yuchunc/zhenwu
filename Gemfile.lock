@@ -43,6 +43,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    ckeditor (4.0.6)
+      mime-types
+      orm_adapter
     coderay (1.0.9)
     devise (3.1.0)
       bcrypt-ruby (~> 3.0)
@@ -176,6 +179,7 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
+  ckeditor
   devise
   factory_girl_rails
   guard

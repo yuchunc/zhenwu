@@ -17,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 
 gem 'ckeditor'
+gem 'carrierwave'
+gem 'mini_magick'
 
 gem 'has_scope'
 

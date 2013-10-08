@@ -1,26 +1,31 @@
+- content_for :morejs do
+  = javascript_include_tag 'ckeditor'
+
 %h3= t "page.edit"
 
-.row
-  .col-md-12
+= form_for [:admin, @page], html: {class: "form-horizontal"} do |f|
 
-    = form_for [:admin, @page], html: {class: "form-horizontal"} do |f|
+  .row
+    .col-md-6
 
       .form-group
-        = f.label :name, t('page.name'), class: "col-md-1 control-label"
-        .col-md-5
+        = f.label :name, t('page.name'), class: "col-md-2 control-label"
+        .col-md-10
           = f.text_field :name, class: "form-control", disabled: @page.immortal ? true : false
 
       .form-group
-        = f.label :title, t('page.title'), class: "col-md-1 control-label"
-        .col-md-5
+        = f.label :title, t('page.title'), class: "col-md-2 control-label"
+        .col-md-10
           =f.text_field :title, class: "form-control"
 
-      .form-group
-        = f.label :description, t('page.description'), class: "col-md-1 control-label"
-        .col-md-5
-          = f.text_area :description, class: "full description form-control"
+    .col-md-6
 
       .form-group
-        = f.label :body, t('page.content'), class: 'col-md-1 control-label'
-        .col-md-5
-          = f.text_area :body, rows: 15, class: 'full content form-control'
+        = f.label :description, t('page.description'), class: "col-md-2 control-label"
+        .col-md-10
+          = f.text_area :description, class: "full description form-control"
+
+  .form-group
+    = f.label :body, t('page.content'), class: 'col-md-1 control-label'
+    .col-md-11
+      = f.cktext_area :body, rows: 15, class: 'full content form-control'

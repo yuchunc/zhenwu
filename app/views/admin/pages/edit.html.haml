@@ -29,3 +29,8 @@
     = f.label :body, t('page.content'), class: 'col-md-1 control-label'
     .col-md-11
       = f.cktext_area :body, rows: 15, class: 'full content form-control'
+
+  .form-group
+    .col-md-12
+      = f.submit t('button.save'), class: 'btn btn-success'
+      .pull-right.btn.btn-danger= link_to t('button.cancel')

@@ -277,6 +277,8 @@ zh-TW:
     page_type: 種類
     edit: 修改頁面
   button:
+    save: 儲存
+    cancel: 取消
     new: 新增
     edit: 修改
     delete: 刪除

@@ -19,6 +19,9 @@ class Admin::PagesController < AdminController
   end
 
   def update
+    if @page.update(page_params)
+      redirect_to admin_pages_path
+    end
   end
 
   def destroy
@@ -28,5 +31,9 @@ class Admin::PagesController < AdminController
 
     def find_page
       @page = Page.find(params[:id])
+    end
+
+    def page_params
+      params.require(:page).permit(:name, :title, :description, :body)
     end
 end

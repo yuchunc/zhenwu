@@ -1,1 +1,7 @@
-%h1= @page.title
+.row
+  .col-md-12
+    .fieldset
+      %h1= @page.title
+      .bodytext
+        %p= @page.body.html_safe
+

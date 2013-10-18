@@ -10,9 +10,12 @@ class Admin::PostsController < AdminController
   end
 
   def new
+    @post = Post.new
   end
 
   def create
+    @post = Post.create(post_params)
+    is_published?
   end
 
   def edit
@@ -33,8 +36,14 @@ class Admin::PostsController < AdminController
       @post = Post.find(params[:id])
     end
 
-    def post_params
+    def is_published?
+      @post.update(published: params[:post][:published] ? true : false)
     end
 
+    def post_params
+      params.require(:post).permit(:title,
+                                   :content
+                                  )
+    end
 
 end

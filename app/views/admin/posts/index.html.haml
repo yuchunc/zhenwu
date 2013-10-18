@@ -1,1 +1,20 @@
 %h3= t('nav.admin.post_control')
+
+%table.table.table-condesed.table-hover
+  %thead
+    %tr
+      %th
+      %th= t('post.date')
+      %th= t('post.title')
+      %th= t('post.status')
+      %th
+  %tbody
+    - @posts.each do |p|
+      %tr
+        %td= link_to icon('remove'), '#'
+        %td= l(p.created_at)
+        %td= p.title
+        %td= p.published
+        %td= link_to t('buttons.edit'), admin_edit_post_path(p)
+
+= link_to t('buttons.new'), new_admin_post_path, class: 'btn btn-success btn-sm'

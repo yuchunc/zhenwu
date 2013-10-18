@@ -1,0 +1,23 @@
+- content_for :morejs do
+  = javascript_include_tag 'ckeditor', 'bootstrap-switch'
+- content_for :morecss do
+  = stylesheet_link_tag 'bootstrap-switch'
+
+= form_for [:admin, @post], html: {class: 'form-horizontal'} do |f|
+
+  .form-group
+    = f.label :title, t('post.title'), class: 'col-md-2 control-label'
+    .col-md-4
+      = f.text_field :title, class: 'form-control'
+
+    = f.label :published, t('post.published'), class: 'col-md-2 control-label'
+    .col-md-1
+      .make-switch.switch-small= check_box_tag 'post[published]', true, @post.published
+
+  .form-group
+    = f.label :content, t('post.content'), class: 'col-md-2 control-label'
+    .col-md-10
+      = f.cktext_area :content, row: 15, class: 'full content form-control'
+
+  = f.submit t('buttons.save'), class: 'btn btn-success'
+  .pull-right.btn.btn-danger= link_to t('buttons.cancel'), :back

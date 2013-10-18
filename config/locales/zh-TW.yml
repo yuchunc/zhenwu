@@ -274,17 +274,23 @@ zh-TW:
     sign_in: 登入
     sign_out: 登出
     remember_me: 保持登入
-  page:
+  pages:
     name: 名稱
     title: 標題
     description: 描述
     content: 內文
     page_type: 種類
     edit: 修改頁面
-  button:
+  buttons:
     save: 儲存
     cancel: 取消
     new: 新增
     edit: 修改
     delete: 刪除
-
+  post:
+    new: 新增文章
+    date: 建立日期
+    title: 標題
+    status: 開放狀態
+    content: 內文
+    published: 文章狀態

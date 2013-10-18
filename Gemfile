@@ -32,6 +32,7 @@ group :test, :development do
 end
 
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails'
+gem 'bootstrap-switch-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

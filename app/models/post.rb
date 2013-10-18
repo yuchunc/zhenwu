@@ -13,6 +13,10 @@ class Post < ActiveRecord::Base
         post.sane_name = post_sane_name
       end
     end
+
+    if post.published
+      post.published_datetime = Time.now
+    end
   end
 
 end

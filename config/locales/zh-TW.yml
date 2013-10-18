@@ -251,6 +251,11 @@ zh-TW:
         subject: '重設密碼步驟'
       unlock_instructions:
         subject: '解鎖步驟'
+  ckeditor:
+    confirm_delete: 確定刪除?
+    buttons:
+      upload: 上傳
+      delete: 刪除
   nav:
     title: 真武會館
     about: 關於真武
@@ -282,3 +287,4 @@ zh-TW:
     new: 新增
     edit: 修改
     delete: 刪除
+

@@ -17,7 +17,7 @@ Zhenwu::Application.routes.draw do
 
     resources :pages
 
-    resources :posts
+    resources :posts, except: [:show]
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

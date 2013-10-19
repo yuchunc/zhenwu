@@ -16,6 +16,8 @@ class Post < ActiveRecord::Base
 
     if post.published
       post.published_datetime = Time.now
+    else
+      post.published_datetime = nil
     end
   end
 

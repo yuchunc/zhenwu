@@ -1,12 +1,9 @@
 class Admin::PostsController < AdminController
 
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
-  end
-
-  def show
   end
 
   def new
@@ -14,8 +11,10 @@ class Admin::PostsController < AdminController
   end
 
   def create
-    @post = Post.create(post_params)
-    is_published?
+    if @post = Post.create(post_params)
+      is_published?
+      redirect_to admin_posts_path
+    end
   end
 
   def edit
@@ -23,11 +22,14 @@ class Admin::PostsController < AdminController
 
   def update
     if @post.update(post_params)
+      is_published?
       redirect_to admin_posts_path
     end
   end
 
   def destroy
+    @post.destroy
+    redirect_to admin_posts_path
   end
 
   private

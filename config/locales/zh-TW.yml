@@ -155,7 +155,8 @@ zh-TW:
   time:
     am: 上午
     formats:
-      default: ! '%Y年%b%d日 %A %H:%M:%S %Z'
+      #default: ! '%Y年%b%d日 %A %H:%M:%S %Z'
+      default: ! '%Y年%b%d日 %A %H:%M:%S'
       long: ! '%Y年%b%d日 %H:%M'
       short: ! '%b%d日 %H:%M'
     pm: 下午
@@ -289,8 +290,10 @@ zh-TW:
     delete: 刪除
   post:
     new: 新增文章
+    edit: 修改文章
     date: 建立日期
     title: 標題
     status: 開放狀態
     content: 內文
     published: 文章狀態
+    published_datetime: 開放時間

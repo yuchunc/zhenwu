@@ -1,3 +1,1 @@
-/*
- *= require bootstrap-switch
- */
+//= require bootstrap-switch

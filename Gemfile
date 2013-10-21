@@ -22,6 +22,8 @@ gem 'mini_magick'
 
 gem 'has_scope'
 
+gem 'rails_admin'
+
 group :test, :development do
   gem 'minitest-rails'
   gem 'guard'

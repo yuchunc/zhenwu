@@ -1,6 +1,7 @@
 Zhenwu::Application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount Ckeditor::Engine => '/ckeditor'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,13 +13,13 @@ Zhenwu::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'application#homepage'
 
-  namespace :admin do
-    get '/', to: "dashboard#index"
+  #namespace :admin do
+  #  get '/', to: "dashboard#index"
 
-    resources :pages
+  #  resources :pages
 
-    resources :posts, except: [:show]
-  end
+  #  resources :posts, except: [:show]
+  #end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

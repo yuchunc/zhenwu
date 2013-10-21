@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+  validates_presence_of :name
+
   before_save do |post|
     recurrent = 1
     post_sane_name = post.title.translit

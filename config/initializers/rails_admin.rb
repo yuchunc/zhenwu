@@ -60,21 +60,21 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :assetable, :polymorphic_association         # Hidden 
+  #     configure :assetable, :polymorphic_association         # Hidden
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :data_file_name, :string 
-  #     configure :data_content_type, :string 
-  #     configure :data_file_size, :integer 
-  #     configure :assetable_id, :integer         # Hidden 
-  #     configure :assetable_type, :string         # Hidden 
-  #     configure :type, :string 
-  #     configure :width, :integer 
-  #     configure :height, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :data_file_name, :string
+  #     configure :data_content_type, :string
+  #     configure :data_file_size, :integer
+  #     configure :assetable_id, :integer         # Hidden
+  #     configure :assetable_type, :string         # Hidden
+  #     configure :type, :string
+  #     configure :width, :integer
+  #     configure :height, :integer
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -110,22 +110,22 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :assetable, :polymorphic_association         # Hidden 
+  #     configure :assetable, :polymorphic_association         # Hidden
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :data, :carrierwave 
-  #     configure :data_file_name, :string         # Hidden 
-  #     configure :data_content_type, :string         # Hidden 
-  #     configure :data_file_size, :integer         # Hidden 
-  #     configure :assetable_id, :integer         # Hidden 
-  #     configure :assetable_type, :string         # Hidden 
-  #     configure :type, :string 
-  #     configure :width, :integer 
-  #     configure :height, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :data, :carrierwave
+  #     configure :data_file_name, :string         # Hidden
+  #     configure :data_content_type, :string         # Hidden
+  #     configure :data_file_size, :integer         # Hidden
+  #     configure :assetable_id, :integer         # Hidden
+  #     configure :assetable_type, :string         # Hidden
+  #     configure :type, :string
+  #     configure :width, :integer
+  #     configure :height, :integer
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -161,22 +161,22 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :assetable, :polymorphic_association         # Hidden 
+  #     configure :assetable, :polymorphic_association         # Hidden
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :data, :carrierwave 
-  #     configure :data_file_name, :string         # Hidden 
-  #     configure :data_content_type, :string         # Hidden 
-  #     configure :data_file_size, :integer         # Hidden 
-  #     configure :assetable_id, :integer         # Hidden 
-  #     configure :assetable_type, :string         # Hidden 
-  #     configure :type, :string 
-  #     configure :width, :integer 
-  #     configure :height, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :data, :carrierwave
+  #     configure :data_file_name, :string         # Hidden
+  #     configure :data_content_type, :string         # Hidden
+  #     configure :data_file_size, :integer         # Hidden
+  #     configure :assetable_id, :integer         # Hidden
+  #     configure :assetable_type, :string         # Hidden
+  #     configure :type, :string
+  #     configure :width, :integer
+  #     configure :height, :integer
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -206,7 +206,7 @@ RailsAdmin.config do |config|
 
   ###  Page  ###
 
-  # config.model 'Page' do
+  config.model 'Page' do
 
   #   # You can copy this to a 'rails_admin do ... end' block inside your page.rb model definition
 
@@ -216,17 +216,17 @@ RailsAdmin.config do |config|
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :title, :string 
-  #     configure :description, :string 
-  #     configure :body, :text 
-  #     configure :immortal, :boolean 
-  #     configure :language, :string 
-  #     configure :page_id, :integer 
-  #     configure :published, :boolean 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :title, :string
+  #     configure :description, :string
+  #     configure :body, :text
+  #     configure :immortal, :boolean
+  #     configure :language, :string
+  #     configure :page_id, :integer
+  #     configure :published, :boolean
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -246,12 +246,14 @@ RailsAdmin.config do |config|
   #       # sort_reverse true     # Sort direction (default is true for primary key, last created first)
   #     end
   #     show do; end
-  #     edit do; end
+    edit do
+      field :body, :ck_editor
+    end
   #     export do; end
   #     # also see the create, update, modal and nested sections, which override edit in specific cases (resp. when creating, updating, modifying from another model in a popup modal or modifying from another model nested form)
   #     # you can override a cross-section field configuration in any section with the same syntax `configure :field_name do ... end`
   #     # using `field` instead of `configure` will exclude all other fields and force the ordering
-  # end
+  end
 
 
   ###  Post  ###
@@ -266,14 +268,14 @@ RailsAdmin.config do |config|
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :title, :string 
-  #     configure :content, :text 
-  #     configure :published, :boolean 
-  #     configure :published_datetime, :datetime 
-  #     configure :sane_name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :title, :string
+  #     configure :content, :text
+  #     configure :published, :boolean
+  #     configure :published_datetime, :datetime
+  #     configure :sane_name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -313,22 +315,22 @@ RailsAdmin.config do |config|
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :email, :string 
-  #     configure :password, :password         # Hidden 
-  #     configure :password_confirmation, :password         # Hidden 
-  #     configure :reset_password_token, :string         # Hidden 
-  #     configure :reset_password_sent_at, :datetime 
-  #     configure :remember_created_at, :datetime 
-  #     configure :sign_in_count, :integer 
-  #     configure :current_sign_in_at, :datetime 
-  #     configure :last_sign_in_at, :datetime 
-  #     configure :current_sign_in_ip, :string 
-  #     configure :last_sign_in_ip, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :name, :string 
-  #     configure :admin, :boolean 
+  #     configure :id, :integer
+  #     configure :email, :string
+  #     configure :password, :password         # Hidden
+  #     configure :password_confirmation, :password         # Hidden
+  #     configure :reset_password_token, :string         # Hidden
+  #     configure :reset_password_sent_at, :datetime
+  #     configure :remember_created_at, :datetime
+  #     configure :sign_in_count, :integer
+  #     configure :current_sign_in_at, :datetime
+  #     configure :last_sign_in_at, :datetime
+  #     configure :current_sign_in_ip, :string
+  #     configure :last_sign_in_ip, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
+  #     configure :name, :string
+  #     configure :admin, :boolean
 
   #   # Cross-section configuration:
 

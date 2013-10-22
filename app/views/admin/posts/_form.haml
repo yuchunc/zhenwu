@@ -1,7 +1,5 @@
 - content_for :morejs do
-  = javascript_include_tag 'ckeditor'#, 'bootstrap-switch'
--# content_for :morecss do
-  = stylesheet_link_tag 'bootstrap-switch'
+  = javascript_include_tag 'ckeditor'
 
 = form_for [:admin, @post], html: {class: 'form-horizontal'} do |f|
 
@@ -12,7 +10,7 @@
 
     = f.label :published, t('post.published'), class: 'col-md-2 control-label'
     .col-md-4
-      .make-switch
+      .make-switch.switch-small
         = check_box_tag 'post[published]', true, @post.published
 
   .form-group

@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  validates_presence_of :name
+  validates_presence_of :title
 
   before_save do |post|
     recurrent = 1

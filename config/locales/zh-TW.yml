@@ -297,3 +297,5 @@ zh-TW:
     content: 內文
     published: 文章狀態
     published_datetime: 開放時間
+    true_string: 開放
+    false_string: 關閉

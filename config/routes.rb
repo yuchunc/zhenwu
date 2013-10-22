@@ -17,7 +17,11 @@ Zhenwu::Application.routes.draw do
 
     resources :pages
 
-    resources :posts, except: [:show]
+    resources :posts, except: [:show] do
+      member do
+        get 'toggle_published'
+      end
+    end
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

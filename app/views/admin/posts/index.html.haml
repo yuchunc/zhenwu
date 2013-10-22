@@ -15,8 +15,7 @@
         %td= link_to icon('remove'), admin_post_path(p), method: :delete, class: 'btn btn-danger btn-xs'
         %td= l(p.created_at)
         %td= p.title
-        %td
-          .make-switch.switch-mini= check_box_tag '#', true, p.published
+        %td= t("post.#{p.published.to_s + '_string'}")
         %td= p.published ? l(p.published_datetime) : ''
         %td= link_to t('buttons.edit'), edit_admin_post_path(p), class: 'btn btn-info btn-xs'
 

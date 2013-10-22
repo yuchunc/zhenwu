@@ -1,6 +1,6 @@
 class Admin::PostsController < AdminController
 
-  before_action :find_post, only: [:edit, :update, :destroy]
+  before_action :find_post, only: [:edit, :update, :destroy, :toggle_published]
 
   def index
     @posts = Post.all
@@ -30,6 +30,11 @@ class Admin::PostsController < AdminController
   def destroy
     @post.destroy
     redirect_to admin_posts_path
+  end
+
+  def toggle_published
+    @post.update_columns(published: !@post.published)
+    render text: 'ok'
   end
 
   private

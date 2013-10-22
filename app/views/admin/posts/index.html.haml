@@ -1,14 +1,28 @@
 %h3= t('nav.admin.post_control')
 .row
-  .col-md-4
+  .col-md-2
     .well
-      = link_to t('buttons.new'), new_admin_post_path
+      %h5= t('post.function')
+      %ul.list-unstyled
+        = link_to t('buttons.new'), new_admin_post_path
+      %hr
+      = t('tag.index')
+      - @tags.each do |tag|
+        = link_to tag.name, '#'
+        .pull-left= link_to icon('remove'), '#'
 
+  .col-md-10
+    .well
+      = form_tag("/admin/posts", method: :get, class: 'form-inline', role: 'form') do
+        = t('post.filters')
+        = label_tag :title_filter, t('post.title'), class: 'sr-only'
+        = text_field_tag :title_filter, params[:title_filter], placeholder: t('post.title')
 
-  .col-md-8
+        .btn-group
+          = link_to t('post.published'), admin_posts_path(published_filter: true), class: 'btn btn-default btn-xs'
+
     .well
-    .well
-      %table.table.table-condesed.table-hover.table-bordered
+      %table.table.table-condesed.table-hover
         %thead
           %tr
             %th
@@ -20,10 +34,10 @@
         %tbody
           - @posts.each do |p|
             %tr
-              %td= link_to icon('remove'), admin_post_path(p), method: :delete, class: 'btn btn-danger btn-xs'
+              %td= link_to icon('remove'), admin_post_path(p), confirm: t('ckeditor.confirm_delete'), method: :delete, class: 'btn btn-danger btn-xs'
               %td= l(p.created_at)
               %td= p.title
               %td= t("post.#{p.published.to_s + '_string'}")
-              %td= p.published ? l(p.published_datetime) : ''
+              %td= p.published ? l(p.published_datetime) : nil
               %td= link_to t('buttons.edit'), edit_admin_post_path(p), class: 'btn btn-info btn-xs'
 

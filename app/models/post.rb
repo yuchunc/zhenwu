@@ -1,6 +1,12 @@
 class Post < ActiveRecord::Base
 
+  has_many :taggings, dependent: :destroy
+  has_many :tags, through: :taggings
+
   validates_presence_of :title
+
+  scope :published_filter, lambda { |published| where('published = ?', published) unless published.nil?}
+  scope :title_filter, lambda { |title| where('title like ?', "#{title}") unless title.nil?}
 
   before_save do |post|
     recurrent = 1

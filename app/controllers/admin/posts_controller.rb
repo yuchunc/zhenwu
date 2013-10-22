@@ -1,9 +1,12 @@
 class Admin::PostsController < AdminController
+  has_scope :published_filter
+  has_scope :title_filter
 
   before_action :find_post, only: [:edit, :update, :destroy, :toggle_published]
 
   def index
-    @posts = Post.all
+    @posts = apply_scopes( Post ).order('created_at DESC')
+    @tags = Tag.all
   end
 
   def new

@@ -13,10 +13,11 @@
 
   .col-md-10
     .well
+      = t('post.filters')
       = form_tag("/admin/posts", method: :get, class: 'form-inline', role: 'form') do
-        = t('post.filters')
         = label_tag :title_filter, t('post.title'), class: 'sr-only'
         = text_field_tag :title_filter, params[:title_filter], placeholder: t('post.title')
+        = button_tag t('buttons.search'), class: 'btn btn-info btn-xs'
 
         .btn-group
           = link_to t('post.published'), admin_posts_path(published_filter: true), class: 'btn btn-default btn-xs'
@@ -34,7 +35,7 @@
         %tbody
           - @posts.each do |p|
             %tr
-              %td= link_to icon('remove'), admin_post_path(p), confirm: t('ckeditor.confirm_delete'), method: :delete, class: 'btn btn-danger btn-xs'
+              %td= link_to icon('remove'), admin_post_path(p), 'data-confirm' => t('ckeditor.confirm_delete'), method: :delete, class: 'btn btn-danger btn-xs'
               %td= l(p.created_at)
               %td= p.title
               %td= t("post.#{p.published.to_s + '_string'}")

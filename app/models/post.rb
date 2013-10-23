@@ -5,8 +5,8 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :title
 
-  scope :published_filter, lambda { |published| where('published = ?', published) unless published.nil?}
-  scope :title_filter, lambda { |title| where('title like ?', "#{title}") unless title.nil?}
+  scope :published_filter, lambda { |published| where("published = ?", published) unless published.nil? }
+  scope :title_filter, lambda { |title| where('title like ?', title) unless title.nil?}
 
   before_save do |post|
     recurrent = 1

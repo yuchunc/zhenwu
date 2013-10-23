@@ -288,6 +288,7 @@ zh-TW:
     new: 新增
     edit: 修改
     delete: 刪除
+    search: 搜尋
   post:
     function: 功能
     new: 新增文章
@@ -300,6 +301,6 @@ zh-TW:
     published_datetime: 開放時間
     true_string: 開放
     false_string: 關閉
-    filters: 篩選
+    filters: 過濾器
   tag:
     index: 標籤清單

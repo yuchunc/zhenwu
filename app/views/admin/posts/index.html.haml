@@ -21,6 +21,7 @@
 
         .btn-group
           = link_to t('post.published'), admin_posts_path(published_filter: true), class: 'btn btn-default btn-xs'
+          = link_to t('post.unpublished'), admin_posts_path(published_filter: false), class: 'btn btn-default btn-xs'
 
     .well
       %table.table.table-condesed.table-hover

@@ -299,6 +299,7 @@ zh-TW:
     content: 內文
     published: 已發佈
     published_datetime: 開放時間
+    unpublished: 未發佈
     true_string: 開放
     false_string: 關閉
     filters: 過濾器

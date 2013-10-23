@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 gem 'devise'
 
 gem 'sqlite3'
+gem 'pg'
 
 gem 'haml'
 

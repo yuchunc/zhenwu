@@ -7,9 +7,22 @@
         = link_to t('buttons.new'), new_admin_post_path
       %hr
       = t('tag.index')
-      - @tags.each do |tag|
-        = link_to tag.name, '#'
-        .pull-left= link_to icon('remove'), '#'
+      .tag_lists
+        - @tags.each do |tag|
+          = link_to tag.name, '#'
+          .pull-left= link_to icon('remove'), '#'
+        = link_to t('tag.new'), '#new_tag', class: 'btn btn-primary btn-xs', data: { toggle: 'modal' }
+        -#= form_tag "/admin/tags", method: :put, remote: true, class: 'form-inline', role: 'form' do
+          .form-group
+            = label_tag :name, t('tag.name'), class: 'sr-only'
+            = text_field_tag :name, '', placeholder: t('tag.name')
+
+        #new_tag.modal.fade{ role: 'dialog'}
+          .modal-dialog
+            .modal-content
+              .modal-header
+                %h4= t('tag.new')
+              .modal-body
 
   .col-md-10
     .well

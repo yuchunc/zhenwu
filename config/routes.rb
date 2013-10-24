@@ -22,6 +22,8 @@ Zhenwu::Application.routes.draw do
         get 'toggle_published'
       end
     end
+
+    resources :tags, only: [:create, :edit, :destroy]
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

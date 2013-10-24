@@ -305,3 +305,5 @@ zh-TW:
     filters: 過濾器
   tag:
     index: 標籤清單
+    name: 名稱
+    new: 新標籤

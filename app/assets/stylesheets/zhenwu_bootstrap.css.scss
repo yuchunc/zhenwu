@@ -48,6 +48,9 @@ textarea.content{
   resize: vertical;
 }
 
+#new_tag .modal-dialog{
+  width: 300px
+}
 
 @media (max-width: 1150px){
   .container{

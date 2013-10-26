@@ -1,1 +1,4 @@
-= form_tag
+= form_for [:admin, one_tag], remote: true, class: 'form-inline' do |f|
+  .form-group
+    = f.label :name, t('tag.name'), class: 'sr-only'
+    = f.text_field :name, placeholder: t('tag.name')

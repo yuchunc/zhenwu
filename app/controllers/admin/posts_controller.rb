@@ -7,6 +7,7 @@ class Admin::PostsController < AdminController
   def index
     @posts = apply_scopes( Post ).order('created_at DESC')
     @tags = Tag.all
+    @new_tag = Tag.new
   end
 
   def new

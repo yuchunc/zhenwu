@@ -30,6 +30,9 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'minitest-rails-capybara'
 #  gem 'debugger', group: [:development, :test]
+
+  gem "bullet"
+  gem "letter_opener"
 end
 
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails', github: 'anjlab/bootstrap-rails'
